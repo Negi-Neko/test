@@ -9,7 +9,196 @@ body,div,ul,li,h1,h2,h3{
 }
 
 ul{list-style:none;}
-h1,h2,h3{font-size:100%;}
+h1,h2,h3{font-size:100%;}@charset "UTF-8";
+
+/*----------------------
+html
+----------------------*/
+html{
+    -webkit-text-size-adjust:100%;
+}
+/*----------------------
+ボディー
+----------------------*/
+body{
+    font-size:0.9rem;
+    margin:0;
+}
+
+/*----------------------
+ヘッダー
+----------------------*/
+#header{
+    max-width:960px;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+    text-align: center;
+    align-items: center;
+}
+
+.title-logo{
+    width:120px;
+    padding:10px 0;
+    margin:0;
+}
+
+.title-logo img{
+    max-width:100%;
+
+}
+
+#header ul{
+    display:flex;
+    max-height:100%;
+    margin-left:auto;
+    margin-right:30px;
+    list-style:none;
+}
+
+#header li{
+    margin-left: 20px;
+}
+
+#header a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+/*----------------------
+初めの画像
+----------------------*/
+.mainImg img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom:30px;
+}
+
+/*----------------------
+パネルヘッダー共通設定
+----------------------*/
+#panelHeader{
+    text-align:center;
+}
+
+#panelHeader h2{
+    display:inline-block;
+    border-bottom: 1px solid;
+}
+/*----------------------
+h2共通設定
+----------------------*/
+h2{
+    font-size:1.8rem;
+}
+
+/*----------------------
+h3共通設定
+----------------------*/
+h3{
+    font-size:1rem;
+}
+
+/*----------------------
+About設定
+----------------------*/
+#about .container{
+    display:flex;
+    margin:30px auto 30px auto;
+    padding:0 4%;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .content img{
+    margin-right:30px;
+    width:100px;
+	height:100px;
+	object-fit:cover;
+	border-radius:50%;
+    object-position:0px 0px;
+}
+#about .content h3{
+    margin:10px 0;
+}
+#about .content p{
+    max-width:400px;
+}
+
+/*----------------------
+Cooking設定
+----------------------*/
+#cooking .container{
+    max-width:100%;
+    display:flex;
+    margin:30px 10px;
+    padding:0 10px;
+}
+
+#cooking .content{
+    width : calc(100% / 3) ;
+    height: auto;
+    margin:0 10px;
+    text-align:center
+}
+#cooking .content img{
+    max-width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+/*----------------------
+フッター設定
+----------------------*/
+#footer{
+    text-align:center;
+    font-size: 0.6rem;
+}
+
+/*----------------------
+レスポンシブ設定（AboutとCookingのレイアウト変更）
+----------------------*/
+
+/* 〜479px：スマホ縦------- */
+@media screen and (max-width:600px) {
+
+    #about .container{
+        display:block;
+        max-width:400px;
+    }
+    #about .content:first-child{
+        text-align: center;
+    }
+    #about .content img{
+        margin-right:0;
+    }
+    #about .content h3{
+        max-width:100%;
+        margin-right:0;
+        margin-left:0;
+    }
+    #about .content p{
+        max-width:100%;
+        margin-right:0;
+        margin-left:0;
+    }
+
+    #cooking .container{
+        display:block;
+        margin:0;
+        padding:0 4%;
+    }
+    #cooking .content{
+        text-align:center;
+        width:100%;
+        margin:0;
+    }
+    #cooking .content img{
+        max-width:100%;
+    }
+}
 img{border:0;}
 
 /*----------------------
